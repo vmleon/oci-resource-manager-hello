@@ -1,0 +1,36 @@
+title: OCI Hello Resource Manager
+description: Explore how to use OCI Resource Manager Stacks
+informationalText: This stack deploys a VCN
+schemaVersion: 1.1.0
+version: "20220428"
+locale: "en"
+
+variableGroups:
+  - title: "Hidden"
+    visible: false
+    variables:
+      - ${region}
+  - title: "General"
+    visible: true
+    variables:
+      - ${compartment_ocid}
+  - title: "Stack"
+    visible: true
+    variables:
+      - ${vcn_name}
+
+variables:
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    title: "Compartment"
+    description: "The compartment in which to create the stack"
+    required: true
+  vcn_name:
+    type: string
+    minLength: 3
+    maxLength: 128
+    pattern: "^[a-z][a-zA-Z0-9]+$"
+    title: "VCN Name"
+    description: "Enter your VCN name"
+    default: "vcn1"
+    required: true

@@ -23,3 +23,9 @@ Select `.zip` and drag and drop `hello.zip`.
 ![Create Stack](images/create_stack.png)
 
 Click next and you can apply the stack.
+
+## Alternative
+
+You can deploy it directly from here.
+
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/vmleon/oci-resource-manager-hello/releases/download/v0.1.0/hello.zip)
